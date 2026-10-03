@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Sunnah &amp; Co.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#0a0f0c}
+#boot{position:fixed;inset:0;z-index:2147483000;background:#0a0f0c;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#faf6eb;font-family:"Cormorant Garamond",Georgia,serif;transition:transform .7s ease-in-out,opacity .7s ease-in-out}
+#boot.leave{transform:translateY(-100%);opacity:0}
+#boot svg{width:min(260px,62vw);height:auto;overflow:visible}
+#boot .d{fill:none;stroke:#d4a84b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420;animation:bd 1.3s ease-in-out forwards}
+#boot .f{fill:#0a4a2e;opacity:0;animation:bf .9s ease-out 1s forwards,bg 2.4s ease-in-out 2s infinite}
+#boot .b{fill:#0a4a2e;stroke:#d4a84b;stroke-width:1.2;opacity:0;transform-box:fill-box;transform-origin:center;animation:bp .5s cubic-bezier(.2,1.5,.4,1) forwards,bu 1.8s ease-in-out infinite;animation-delay:calc(.5s + var(--i)*.09s),calc(1.9s + var(--i)*.13s)}
+#boot .g{fill:#d4a84b;opacity:0;transform-box:fill-box;transform-origin:center;animation:bp .5s cubic-bezier(.2,1.5,.4,1) 1.5s forwards}
+#boot .w{margin-top:-6px;font-size:clamp(32px,8vw,48px);font-weight:600;letter-spacing:.18em;display:flex;gap:.12em;align-items:baseline}
+#boot .w span{opacity:0;display:inline-block;animation:br .6s ease-out forwards;animation-delay:calc(1.4s + var(--i)*.07s)}
+#boot .w .c{color:#d4a84b;margin-left:.3em}
+#boot .t{margin-top:10px;font:500 11px "Jost",system-ui,sans-serif;letter-spacing:.4em;text-transform:uppercase;color:rgba(250,246,235,.55);opacity:0;animation:br .6s ease-out 2s forwards}
+#boot .bar{margin-top:30px;width:160px;height:1px;background:rgba(250,246,235,.15);overflow:hidden}
+#boot .bar i{display:block;width:40%;height:100%;background:#d4a84b;animation:bs 1.4s ease-in-out infinite}
+@keyframes bd{to{stroke-dashoffset:0}}@keyframes bf{to{opacity:1}}@keyframes bg{0%,100%{opacity:1}50%{opacity:.75}}
+@keyframes bp{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+@keyframes bu{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+@keyframes br{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes bs{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+@media (prefers-reduced-motion:reduce){#boot *{animation-duration:.01s!important;animation-delay:0s!important;animation-iteration-count:1!important}}
+</style></head>
+<body class="font-sans">
+<div id="boot" role="status" aria-label="Loading Sunnah &amp; Co.">
+<svg viewBox="0 0 200 200" aria-hidden="true"><circle class="b" style="--i:0" cx="22.9" cy="100.0" r="4.4"/><circle class="b" style="--i:1" cx="30.2" cy="85.0" r="4.4"/><circle class="b" style="--i:2" cx="40.4" cy="71.7" r="4.4"/><circle class="b" style="--i:3" cx="53.0" cy="60.8" r="4.4"/><circle class="b" style="--i:4" cx="67.5" cy="52.7" r="4.4"/><circle class="b" style="--i:5" cx="83.4" cy="47.7" r="4.4"/><circle class="b" style="--i:6" cx="100.0" cy="46.0" r="4.4"/><circle class="b" style="--i:7" cx="116.6" cy="47.7" r="4.4"/><circle class="b" style="--i:8" cx="132.5" cy="52.7" r="4.4"/><circle class="b" style="--i:9" cx="147.0" cy="60.8" r="4.4"/><circle class="b" style="--i:10" cx="159.6" cy="71.7" r="4.4"/><circle class="b" style="--i:11" cx="169.8" cy="85.0" r="4.4"/><circle class="b" style="--i:12" cx="177.1" cy="100.0" r="4.4"/>
+<path class="f" d="M58 150 C52 104 84 82 100 56 C116 82 148 104 142 150 Z"/>
+<path class="d" d="M58 150 C52 104 84 82 100 56 C116 82 148 104 142 150 Z"/>
+<path class="d" d="M50 150 H150" style="animation-delay:.2s"/>
+<path class="d" d="M100 56 L100 44" style="animation-delay:1.1s"/>
+<path class="d" d="M88 150 V132 A12 12 0 0 1 112 132 V150" style="animation-delay:.9s;stroke-width:1.4;stroke-opacity:.7"/>
+<path class="g" d="M95 36 A6 6 0 1 0 102 36 A4.6 4.6 0 1 1 95 36 Z"/>
+</svg>
+<div class="w"><span style="--i:0">S</span><span style="--i:1">U</span><span style="--i:2">N</span><span style="--i:3">N</span><span style="--i:4">A</span><span style="--i:5">H</span><span class="c" style="--i:7">&amp; CO.</span></div>
+<div class="t">Live the Sunnah</div>
+<div class="bar"><i></i></div>
+</div>
+<div id="root"></div><script type="module" src="./main.tsx"></script></body></html>
